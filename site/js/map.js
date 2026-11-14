@@ -3,7 +3,6 @@
 import { svg } from './dom.js';
 
 const WIDTH = 640;
-const HEIGHT = 660;
 const PAD = 14;
 const RAD = Math.PI / 180;
 
@@ -27,13 +26,14 @@ function fitProjection(states) {
     minX = Math.min(minX, x); maxX = Math.max(maxX, x);
     minY = Math.min(minY, y); maxY = Math.max(maxY, y);
   }
-  const scale = Math.min((WIDTH - 2 * PAD) / (maxX - minX), (HEIGHT - 2 * PAD) / (maxY - minY));
-  const dx = (WIDTH - scale * (maxX - minX)) / 2 - scale * minX;
-  const dy = (HEIGHT - scale * (maxY - minY)) / 2 - scale * minY;
-  return (point) => {
+  // Fill the width; the height follows from the shape of the region.
+  const scale = (WIDTH - 2 * PAD) / (maxX - minX);
+  const height = Math.ceil(scale * (maxY - minY) + 2 * PAD);
+  const project = (point) => {
     const [x, y] = raw(point);
-    return [x * scale + dx, y * scale + dy];
+    return [(x - minX) * scale + PAD, (y - minY) * scale + PAD];
   };
+  return { project, height };
 }
 
 const path = (project, rings) => rings
@@ -44,8 +44,8 @@ const path = (project, rings) => rings
 const LABEL_AT = { AZ: [-111.7, 34.6], CA: [-120.0, 36.9], CO: [-105.6, 39.4], NM: [-106.1, 34.0], NV: [-116.8, 39.9], UT: [-111.6, 38.2], WY: [-107.5, 43.6] };
 
 export function createMap(root, geo, { onSelect }) {
-  const project = fitProjection(geo.states);
-  root.setAttribute('viewBox', `0 0 ${WIDTH} ${HEIGHT}`);
+  const { project, height } = fitProjection(geo.states);
+  root.setAttribute('viewBox', `0 0 ${WIDTH} ${height}`);
   root.replaceChildren();
 
   const land = svg('g', { class: 'map-land', 'aria-hidden': 'true' });
@@ -76,7 +76,7 @@ export function createMap(root, geo, { onSelect }) {
         'aria-pressed': String(selected),
       });
       g.append(svg('title', {}, label));
-      if (ring) g.append(svg('circle', { r: 19, class: 'marker-ring', stroke: ring.color }));
+      if (ring) g.append(svg('circle', { r: 19, class: 'marker-ring-edge' }), svg('circle', { r: 19, class: 'marker-ring', stroke: ring.color }));
       g.append(svg('circle', { r: 13, class: 'marker-dot' }));
       g.append(svg('text', { class: 'marker-score', dy: '0.35em' }, String(score.total)));
       g.addEventListener('click', () => onSelect(p.id));

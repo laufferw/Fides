@@ -67,6 +67,7 @@ def normalize(rows: list[dict], source_url: str, retrieved: str) -> dict:
         "source": {
             "title": "U.S. Drought Monitor, county statistics by percent area",
             "url": source_url,
+            "homepage": "https://droughtmonitor.unl.edu/",
             "retrieved": retrieved,
             "attribution": "The U.S. Drought Monitor is jointly produced by the National Drought Mitigation Center at the University of Nebraska-Lincoln, the United States Department of Agriculture, and the National Oceanic and Atmospheric Administration.",
         },

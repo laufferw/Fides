@@ -121,6 +121,7 @@ main.wrap { padding-top: 24px; padding-bottom: 48px; min-height: 60vh; }
 .marker-dot { fill: currentColor; stroke: var(--card); stroke-width: 2; }
 .marker-score { fill: var(--card); font: 700 11px var(--font); text-anchor: middle; pointer-events: none; }
 .marker-ring { fill: none; stroke-width: 6; }
+.marker-ring-edge { fill: none; stroke: var(--ink); stroke-width: 8; opacity: 0.45; }
 .marker.is-selected .marker-dot { stroke: var(--ink); stroke-width: 3; }
 .marker:focus { outline: none; }
 .marker:focus-visible .marker-dot { stroke: var(--accent); stroke-width: 4; }
@@ -140,7 +141,9 @@ main.wrap { padding-top: 24px; padding-bottom: 48px; min-height: 60vh; }
 .legend-item { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
 .legend-note { flex-basis: 100%; }
 .swatch { width: 12px; height: 12px; border-radius: 50%; background: currentColor; display: inline-block; }
-.swatch-ring { background: none; border: 3px solid; width: 14px; height: 14px; }
+.swatch-ring { background: none; border: 4px solid; width: 15px; height: 15px; flex: none; box-shadow: 0 0 0 1px var(--ink-soft), inset 0 0 0 1px var(--ink-soft); }
+.drought-note { display: inline-flex; align-items: center; gap: 6px; }
+.project-meta .drought-note { display: flex; }
 
 /* ---- project list */
 

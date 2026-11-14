@@ -2,6 +2,7 @@ import { loadAll } from './data.js';
 import { h, fill, link, formatDate } from './dom.js';
 import { createMap } from './map.js';
 import { RUBRIC, BANDS, scoreProject } from './scoring.js';
+import { DROUGHT_LEVELS, droughtFor } from './drought.js';
 
 const LABELS = {
   status: { proposed: 'Proposed', approved: 'Approved', under_construction: 'Under construction', operating: 'Operating', cancelled: 'Cancelled' },
@@ -15,7 +16,7 @@ const $ = (id) => document.getElementById(id);
 const number = (n, digits = 0) => n.toLocaleString('en-US', { maximumFractionDigits: digits });
 const mgy = (n) => (n == null ? 'Not disclosed' : `${number(n, 1)} million gallons a year`);
 
-const state = { data: null, scores: new Map(), selectedId: null, map: null };
+const state = { data: null, scores: new Map(), selectedId: null, map: null, showDrought: true };
 
 // ---------------------------------------------------------------- scoring
 
@@ -102,9 +103,54 @@ function renderProjects() {
   renderDetail();
 }
 
-// Hooks for map data layers (see the drought layer below).
-function markerRing() { return null; }
-function markerNote() { return null; }
+// ---------------------------------------------------------------- drought layer
+
+const drought = (p) => droughtFor(state.data.drought, p);
+
+function setupDroughtToggle() {
+  if (!state.data.drought) return;
+  const box = h('input', { type: 'checkbox', checked: state.showDrought });
+  box.addEventListener('change', () => {
+    state.showDrought = box.checked;
+    renderLegend();
+    renderProjects();
+  });
+  fill($('map-tools'), h('label', {}, box, 'Show county drought level'));
+}
+
+// Ring drawn around a map marker.
+function markerRing(p) {
+  const d = state.showDrought && drought(p);
+  return d ? { color: d.color, label: `Drought across most of the county: ${d.text}` } : null;
+}
+
+// Drought text in a project card.
+function markerNote(p) {
+  const d = state.showDrought && drought(p);
+  return d ? h('span', { class: 'drought-note' }, h('span', { class: 'swatch swatch-ring', style: `border-color:${d.color}` }), `Drought: ${d.text}`) : null;
+}
+
+function droughtFact(p) {
+  const d = drought(p);
+  if (!d) return null;
+  const src = state.data.drought;
+  const share = `${number(d.pct, 0)}% of ${d.countyName}`;
+  return fact('County drought',
+    h('span', { class: 'drought-note' }, h('span', { class: 'swatch swatch-ring', style: `border-color:${d.color}` }), h('strong', {}, d.text)),
+    d.level === 'None'
+      ? ` ${share} is free of drought.` + (d.maxLevel !== 'None' ? ` Worst level present: ${d.maxText}.` : '')
+      : ` ${share} is at this level or worse.` + (d.maxLevel !== d.level ? ` Worst level present: ${d.maxText}.` : ''),
+    h('span', { class: 'retrieved' }, ' ', link(src.source.homepage || src.source.url, 'U.S. Drought Monitor'), ` map of ${formatDate(src.map_date)}.`));
+}
+
+function droughtLegend() {
+  if (!state.data.drought || !state.showDrought) return null;
+  return [
+    h('span', { class: 'legend-group' }, h('span', { class: 'legend-title' }, 'County drought (ring)'),
+      DROUGHT_LEVELS.map((l) => h('span', { class: 'legend-item' }, h('span', { class: 'swatch swatch-ring', style: `border-color:${l.color}` }), l.key === 'None' ? 'None' : `${l.key} ${l.label}`))),
+    h('span', { class: 'legend-note' }, `The ring shows the most severe drought level covering at least half of the project's county. U.S. Drought Monitor map of ${formatDate(state.data.drought.map_date)}.`),
+  ];
+}
 
 function select(id, { focus = false } = {}) {
   state.selectedId = id;
@@ -175,7 +221,7 @@ function renderDetail() {
       fact('Cooling', RUBRIC.cooling.tiers[p.cooling]?.label ?? p.cooling),
       fact('Power', powerFact(p)),
       fact('Waste heat', RUBRIC.heat_reuse.tiers[p.heat_reuse]?.label ?? p.heat_reuse),
-      detailExtras(p)),
+      droughtFact(p)),
     h('h3', {}, 'Public commitments'),
     p.commitments.length
       ? h('ul', { class: 'commitments' }, p.commitments.map((c) => h('li', {},
@@ -186,8 +232,6 @@ function renderDetail() {
     h('h3', {}, 'Sources'),
     sourceList(p.sources));
 }
-
-function detailExtras() { return null; }
 
 // ---------------------------------------------------------------- rules tab
 
@@ -274,13 +318,12 @@ function setupTabs() {
 }
 
 function renderFooter() {
-  const { geo } = state.data;
-  $('footer').replaceChildren(
+  const { geo, drought } = state.data;
+  fill($('footer'),
     h('p', {}, 'Fides is a public-benefit project. Every real record carries its source and the date it was retrieved. Found an error? See CONTRIBUTING.md in the repository.'),
-    h('p', { class: 'retrieved' }, 'State outlines: ', link(geo.source.url, 'U.S. Census Bureau cartographic boundaries via us-atlas'), '.', footerExtras()));
+    h('p', { class: 'retrieved' }, 'State outlines: ', link(geo.source.url, 'U.S. Census Bureau cartographic boundaries via us-atlas'), '.'),
+    drought ? h('p', { class: 'retrieved' }, 'Drought data: ', link(drought.source.homepage || drought.source.url, 'U.S. Drought Monitor'), `, retrieved ${formatDate(drought.source.retrieved)}. ${drought.source.attribution}`) : null);
 }
-
-function footerExtras() { return null; }
 
 // ---------------------------------------------------------------- start
 
@@ -300,6 +343,7 @@ async function start() {
   scoreAll();
   state.map = createMap($('map'), state.data.geo, { onSelect: (id) => select(id, { focus: true }) });
   setupFilters();
+  setupDroughtToggle();
   $('project-list').addEventListener('click', (event) => {
     const card = event.target.closest('.project-card');
     if (card) select(card.dataset.id, { focus: true });
@@ -316,9 +360,7 @@ function renderLegend() {
   fill($('map-legend'),
     h('span', { class: 'legend-group' }, h('span', { class: 'legend-title' }, 'Fides score'),
       BANDS.map((b, i) => h('span', { class: 'legend-item' }, h('span', { class: `swatch band-${b.key}` }), `${b.label} ${i === BANDS.length - 1 ? `under ${BANDS[i - 1].min}` : `${b.min}+`}`))),
-    legendExtras());
+    droughtLegend());
 }
-
-function legendExtras() { return null; }
 
 start();
