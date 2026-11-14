@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fides — data center accountability in the American West</title>
+  <meta name="description" content="Fides tracks the water, cooling, power and public promises of data centers in the American West.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-row">
+      <div>
+        <p class="wordmark">Fides</p>
+        <p class="tagline">Do data centers in the West keep their promises on water and power?</p>
+      </div>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button role="tab" id="tab-projects" aria-controls="view-projects" aria-selected="true">Projects</button>
+        <button role="tab" id="tab-rules" aria-controls="view-rules" aria-selected="false" tabindex="-1">Local rules</button>
+        <button role="tab" id="tab-scoring" aria-controls="view-scoring" aria-selected="false" tabindex="-1">How scoring works</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="demo-banner" id="demo-banner" hidden>
+    <div class="wrap"><strong>Demo data.</strong> The projects shown here are fictional and exist only to demonstrate the tracker. Local rules, drought levels and state power mix are real and cited.</div>
+  </div>
+
+  <main id="main" class="wrap">
+    <p id="status" class="status" role="status">Loading data…</p>
+
+    <section id="view-projects" role="tabpanel" aria-labelledby="tab-projects" hidden>
+      <form class="filters" id="filters" aria-label="Filter projects">
+        <label class="grow">Search
+          <input type="search" name="q" placeholder="Project, operator or county">
+        </label>
+        <label>State
+          <select name="state"><option value="">All states</option></select>
+        </label>
+        <label>Status
+          <select name="status"><option value="">Any status</option></select>
+        </label>
+        <label>Water source
+          <select name="water"><option value="">Any source</option></select>
+        </label>
+        <label>Score
+          <select name="band">
+            <option value="">Any score</option>
+            <option value="80">Strong (80+)</option>
+            <option value="60">Fair or better (60+)</option>
+            <option value="40">Weak or better (40+)</option>
+            <option value="below40">Poor (below 40)</option>
+          </select>
+        </label>
+        <label>Sort by
+          <select name="sort">
+            <option value="score-desc">Score, high to low</option>
+            <option value="score-asc">Score, low to high</option>
+            <option value="name">Name</option>
+            <option value="mw">Size (MW)</option>
+          </select>
+        </label>
+        <button type="reset" class="quiet">Clear</button>
+      </form>
+
+      <div class="layout">
+        <div class="col-main">
+          <figure class="map-card">
+            <div class="map-tools" id="map-tools"></div>
+            <svg id="map" role="group" aria-label="Map of tracked projects in seven Western states"></svg>
+            <figcaption id="map-legend" class="legend"></figcaption>
+          </figure>
+          <h2 class="list-heading" id="list-heading">Projects</h2>
+          <ul id="project-list" class="project-list" aria-labelledby="list-heading"></ul>
+        </div>
+        <aside id="detail" class="detail" aria-live="polite" tabindex="-1"></aside>
+      </div>
+    </section>
+
+    <section id="view-rules" role="tabpanel" aria-labelledby="tab-rules" hidden></section>
+    <section id="view-scoring" role="tabpanel" aria-labelledby="tab-scoring" hidden></section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap" id="footer"></div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
