@@ -1,0 +1,153 @@
+{
+  "source": {
+    "title": "U.S. Energy Information Administration, State Historical Tables: Net Generation by State by Type of Producer by Energy Source (EIA-906, EIA-920, EIA-923)",
+    "url": "https://www.eia.gov/electricity/data/state/annual_generation_state.xls",
+    "retrieved": "2026-11-14"
+  },
+  "year": 2024,
+  "count_nuclear_as_clean": true,
+  "clean_sources": [
+    "Wind",
+    "Solar Thermal and Photovoltaic",
+    "Hydroelectric Conventional",
+    "Geothermal",
+    "Nuclear"
+  ],
+  "method": "clean_share_pct = net generation from clean_sources / total net generation, all producers (Total Electric Power Industry), for the latest year in the file. In-state generation only; not a utility- or site-specific mix.",
+  "states": {
+    "AZ": {
+      "total_mwh": 116026511,
+      "clean_mwh": 51063062,
+      "clean_share_pct": 44.0,
+      "clean_share_pct_with_nuclear": 44.0,
+      "clean_share_pct_without_nuclear": 16.1,
+      "by_source_mwh": {
+        "Coal": 9814665,
+        "Hydroelectric Conventional": 5313826,
+        "Natural Gas": 55089930,
+        "Nuclear": 32388118,
+        "Other": -224136,
+        "Other Biomass": 16609,
+        "Petroleum": 29939,
+        "Pumped Storage": 68626,
+        "Solar Thermal and Photovoltaic": 10820663,
+        "Wind": 2540455,
+        "Wood and Wood Derived Fuels": 167816
+      }
+    },
+    "CA": {
+      "total_mwh": 214191383,
+      "clean_mwh": 122433207,
+      "clean_share_pct": 57.2,
+      "clean_share_pct_with_nuclear": 57.2,
+      "clean_share_pct_without_nuclear": 48.6,
+      "by_source_mwh": {
+        "Coal": 245554,
+        "Geothermal": 10524488,
+        "Hydroelectric Conventional": 29453931,
+        "Natural Gas": 86655675,
+        "Nuclear": 18378835,
+        "Other": -1112702,
+        "Other Biomass": 2273647,
+        "Other Gases": 1208861,
+        "Petroleum": 56586,
+        "Pumped Storage": -45688,
+        "Solar Thermal and Photovoltaic": 48427600,
+        "Wind": 15648353,
+        "Wood and Wood Derived Fuels": 2476245
+      }
+    },
+    "CO": {
+      "total_mwh": 58798395,
+      "clean_mwh": 24200899,
+      "clean_share_pct": 41.2,
+      "clean_share_pct_with_nuclear": 41.2,
+      "clean_share_pct_without_nuclear": 41.2,
+      "by_source_mwh": {
+        "Coal": 16477718,
+        "Hydroelectric Conventional": 1660362,
+        "Natural Gas": 17926802,
+        "Other": -4053,
+        "Other Biomass": 74913,
+        "Petroleum": 42079,
+        "Pumped Storage": 66939,
+        "Solar Thermal and Photovoltaic": 4938527,
+        "Wind": 17602010,
+        "Wood and Wood Derived Fuels": 13098
+      }
+    },
+    "NM": {
+      "total_mwh": 39697294,
+      "clean_mwh": 19601518,
+      "clean_share_pct": 49.4,
+      "clean_share_pct_with_nuclear": 49.4,
+      "clean_share_pct_without_nuclear": 49.4,
+      "by_source_mwh": {
+        "Coal": 8431834,
+        "Geothermal": 26097,
+        "Hydroelectric Conventional": 153211,
+        "Natural Gas": 11647803,
+        "Other": -9836,
+        "Other Biomass": 25224,
+        "Petroleum": 752,
+        "Solar Thermal and Photovoltaic": 4286642,
+        "Wind": 15135568
+      }
+    },
+    "NV": {
+      "total_mwh": 45528427,
+      "clean_mwh": 18266137,
+      "clean_share_pct": 40.1,
+      "clean_share_pct_with_nuclear": 40.1,
+      "clean_share_pct_without_nuclear": 40.1,
+      "by_source_mwh": {
+        "Coal": 2323250,
+        "Geothermal": 3885732,
+        "Hydroelectric Conventional": 1606304,
+        "Natural Gas": 24999470,
+        "Other": -118273,
+        "Other Biomass": 52153,
+        "Other Gases": 0,
+        "Petroleum": 5690,
+        "Solar Thermal and Photovoltaic": 12454761,
+        "Wind": 319340
+      }
+    },
+    "UT": {
+      "total_mwh": 35133906,
+      "clean_mwh": 7269147,
+      "clean_share_pct": 20.7,
+      "clean_share_pct_with_nuclear": 20.7,
+      "clean_share_pct_without_nuclear": 20.7,
+      "by_source_mwh": {
+        "Coal": 15966584,
+        "Geothermal": 450980,
+        "Hydroelectric Conventional": 758694,
+        "Natural Gas": 11640450,
+        "Other": 152765,
+        "Other Biomass": 70225,
+        "Other Gases": 1333,
+        "Petroleum": 33403,
+        "Solar Thermal and Photovoltaic": 5311068,
+        "Wind": 748405
+      }
+    },
+    "WY": {
+      "total_mwh": 40709150,
+      "clean_mwh": 10441579,
+      "clean_share_pct": 25.6,
+      "clean_share_pct_with_nuclear": 25.6,
+      "clean_share_pct_without_nuclear": 25.6,
+      "by_source_mwh": {
+        "Coal": 24381618,
+        "Hydroelectric Conventional": 1016594,
+        "Natural Gas": 5426058,
+        "Other": 89953,
+        "Other Gases": 324132,
+        "Petroleum": 45811,
+        "Solar Thermal and Photovoltaic": 423149,
+        "Wind": 9001836
+      }
+    }
+  }
+}

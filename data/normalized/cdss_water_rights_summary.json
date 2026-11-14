@@ -1,0 +1,82 @@
+{
+  "units": "cfs = cubic feet per second (flow); acre_feet = volume. Absolute rights are in use; conditional rights are not yet perfected.",
+  "counties": {
+    "El Paso": {
+      "source": {
+        "title": "Colorado Division of Water Resources, CDSS REST services: water rights net amounts",
+        "url": "https://dwr.state.co.us/Rest/GET/api/v2/waterrights/netamount/?county=El%20Paso&format=json",
+        "retrieved": "2026-11-14"
+      },
+      "rights_count": 4273,
+      "structures_count": 3586,
+      "by_structure_type": {
+        "Well": 1856,
+        "Well Field": 1599,
+        "Reservoir": 223,
+        "Spring": 132,
+        "Ditch": 122,
+        "Pipeline": 119,
+        "Reach": 80,
+        "Aquifer NNT/NT Reservation": 67,
+        "Other": 27,
+        "Pump": 15,
+        "Minimum Flow": 12,
+        "Well Group": 11,
+        "Augmentation/Replacement Plan": 4,
+        "Reservoir System": 3,
+        "Measuring Point": 2,
+        "Recharge Area": 1
+      },
+      "net_amounts": {
+        "cfs": {
+          "net_absolute": 2529.05,
+          "net_conditional": 177.04
+        },
+        "acre_feet": {
+          "net_absolute": 3396315.24,
+          "net_conditional": 8731.95
+        }
+      },
+      "earliest_appropriation_date": "1860-02-20",
+      "latest_appropriation_date": "2024-09-03"
+    },
+    "Weld": {
+      "source": {
+        "title": "Colorado Division of Water Resources, CDSS REST services: water rights net amounts",
+        "url": "https://dwr.state.co.us/Rest/GET/api/v2/waterrights/netamount/?county=Weld&format=json",
+        "retrieved": "2026-11-14"
+      },
+      "rights_count": 7211,
+      "structures_count": 5795,
+      "by_structure_type": {
+        "Well": 5284,
+        "Reservoir": 725,
+        "Ditch": 676,
+        "Well Field": 97,
+        "Pump": 88,
+        "Recharge Area": 72,
+        "Spring": 70,
+        "Pipeline": 66,
+        "Well Group": 40,
+        "Other": 36,
+        "Seep": 15,
+        "Reservoir System": 13,
+        "Reach": 12,
+        "Reach (Aggregating)": 11,
+        "Stream Confluence": 6
+      },
+      "net_amounts": {
+        "cfs": {
+          "net_absolute": 25716.3,
+          "net_conditional": 26710.75
+        },
+        "acre_feet": {
+          "net_absolute": 567015.83,
+          "net_conditional": 1314516.51
+        }
+      },
+      "earliest_appropriation_date": "1860-01-01",
+      "latest_appropriation_date": "2024-01-16"
+    }
+  }
+}
