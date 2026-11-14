@@ -1,0 +1,8 @@
+# Raw downloads are a local cache; normalized outputs are what we commit.
+data/raw/
+# Full per-county water-rights extracts are large; the summary is committed.
+data/normalized/cdss/
+__pycache__/
+.pytest_cache/
+node_modules/
+.DS_Store

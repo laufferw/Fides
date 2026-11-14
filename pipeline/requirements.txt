@@ -1,0 +1,4 @@
+# Pipeline and test dependencies. The HTTP layer uses only the standard library.
+xlrd>=2.0        # reads EIA's .xls state generation workbook
+jsonschema>=4.18 # validates data/*.json against data/schema/*.json
+pytest>=8

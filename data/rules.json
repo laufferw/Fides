@@ -1,0 +1,150 @@
+{
+  "rules": [
+    {
+      "id": "az-chandler-ord-5033",
+      "jurisdiction": "City of Chandler",
+      "state": "AZ",
+      "level": "city",
+      "title": "Data center zoning, neighbor notice and noise rules",
+      "citation": "Ordinance No. 5033; Chandler City Code Chapter 35, Sections 35-200 and 35-2214",
+      "adopted": "2022-12-08",
+      "effective": "2023-01-05",
+      "summary": "Chandler allows a data center only where a Planned Area Development zoning district explicitly approves it, and requires neighbor notice, sound studies and limits on backup-generator testing. The ordinance does not regulate water use.",
+      "provisions": [
+        {
+          "topic": "zoning",
+          "text": "Data centers may not operate unless explicitly approved as part of a Planned Area Development zoning district. An ancillary data center is allowed if it occupies no more than 10% of the building footprint, serves only the on-site owner's own functions, and is not in a separate stand-alone structure."
+        },
+        {
+          "topic": "notice",
+          "text": "Before construction, the owner must mail notice to residents and homeowners' associations within a half-mile radius, hold two neighborhood meetings, and post a sign on the property at least 15 days before each meeting."
+        },
+        {
+          "topic": "noise",
+          "text": "A third-party acoustic engineer must document baseline sound levels before the first neighborhood meeting. The data center must be designed so its sound does not exceed the ambient levels in that baseline study."
+        },
+        {
+          "topic": "noise",
+          "text": "The operator must run a noise study when the certificate of occupancy or completion is issued, then annually during peak operation for five years, and give the results to the City. On request by City staff, the operator must provide an on-site neighborhood liaison from 8 am to 10 pm daily to respond to noise complaints."
+        },
+        {
+          "topic": "power",
+          "text": "Routine backup-generator operation, including testing, must be announced on a public website at least 24 hours ahead and may run only 9 am to 5 pm, Monday through Friday, excluding holidays, unless the generators are supplying power during an outage."
+        }
+      ],
+      "caveats": "The ordinance text shows it was introduced on December 5, 2022 and passed and adopted on December 8, 2022; the City's announcement gives December 5 as the approval date and January 5 as the effective date. Water service to large users is governed by other parts of the Chandler City Code that Fides has not yet reviewed.",
+      "sources": [
+        {
+          "title": "City of Chandler, Ordinance No. 5033 (signed copy, PDF)",
+          "url": "https://www.chandleraz.gov/sites/default/files/departments/development-services/PLH22-0053-Ordinance-No-5033-Data-Center.pdf",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "City of Chandler news release, \"Chandler's data center ordinance now in effect\"",
+          "url": "https://www.chandleraz.gov/news-center/chandlers-data-center-ordinance-now-effect",
+          "retrieved": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "id": "az-marana-ord-2024-029",
+      "jurisdiction": "Town of Marana",
+      "state": "AZ",
+      "level": "town",
+      "title": "Data center approval, water, power and noise requirements",
+      "citation": "Marana Ordinance No. 2024.029; Marana Town Code Title 17 (Land Development)",
+      "adopted": "2024-12",
+      "effective": null,
+      "summary": "Marana Water will not supply potable water for data center cooling. A data center as a principal use needs a Specific Plan rezoning with public hearings, and the application must state the project's water and power sources and estimated annual water consumption.",
+      "provisions": [
+        {
+          "topic": "water",
+          "text": "The Marana water department will not provide potable water to a data center, as a principal or accessory use, for its cooling system, humidity control and other similar operations. The developer must demonstrate an alternate source of water for these operations."
+        },
+        {
+          "topic": "reporting",
+          "text": "A Specific Plan application for a data center must include an estimate of annual water consumption, the intended source of water with documentation from the water provider affirming sufficient water resources exist, the intended source of electric power with documentation from the electric utility affirming sufficient power exists, and an assessment of future energy needs."
+        },
+        {
+          "topic": "zoning",
+          "text": "A data center as a principal use must go through a Specific Plan rezoning, with review by Town staff, the Planning Commission and the Town Council at public meetings. Accessory data centers may occupy no more than 15% of the site and must serve only the on-site owner."
+        },
+        {
+          "topic": "zoning",
+          "text": "Per the Town's summary: buildings must be set back at least 400 feet from adjacent property planned or zoned residential, and building height is limited to 55 feet plus 10 feet for screened rooftop equipment."
+        },
+        {
+          "topic": "noise",
+          "text": "Per the Town's summary: an independent acoustic engineer must complete a noise study; operating data centers must meet day-time and night-time sound limits and provide annual noise reports for five years after opening."
+        },
+        {
+          "topic": "power",
+          "text": "Per the Town's summary: generators may be used only in emergencies or limited weekday testing, and diesel generators must be Tier IV or newer."
+        }
+      ],
+      "caveats": "The ordinance says it takes effect on the 31st day after adoption; the day of adoption in December 2024 is not legible in the scanned copy, so no exact effective date is given here. The water rule limits what Marana Water will supply; it does not by itself bar other water sources. Later amendments to the Town Code have not been reviewed.",
+      "sources": [
+        {
+          "title": "Town of Marana, Ordinance No. 2024.029 (PDF)",
+          "url": "https://www.maranaaz.gov/files/assets/cityofmarana/v/1/town-clerk/documents/ordinances/ordinance-2024.029-adoptiong-amendments-to-marana-town-code-title-17-_land-development_-revising-section-17-1-6-definitions.pdf",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Town of Marana, \"Data Centers\" information page",
+          "url": "https://www.maranaaz.gov/Government/Data-Centers",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Town of Marana news release, \"Town Clarifies Data Center Review Process and Development Standards\" (June 29, 2026)",
+          "url": "https://www.maranaaz.gov/Newsroom-Entries/2026/Town-Clarifies-Data-Center-Review-Process-and-Development-StandardsNew-page",
+          "retrieved": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "id": "ut-hb76-2026",
+      "jurisdiction": "State of Utah",
+      "state": "UT",
+      "level": "state",
+      "title": "Data Center Water Transparency Amendments",
+      "citation": "H.B. 76 (2026 General Session); enacts Utah Code 73-5-8.3, amends 73-2-25",
+      "adopted": null,
+      "effective": "2026-05-06",
+      "summary": "Operators of new large data centers in Utah must tell their water provider and the Division of Water Rights how much water they expect to withdraw before building, then report actual withdrawals every year. The Division must publish each facility's withdrawal data.",
+      "provisions": [
+        {
+          "topic": "other",
+          "text": "A \"large data center\" is a facility with an annual water withdrawal of 75 acre-feet per year or more whose buildings total 10,000 square feet or more. A \"new large data center\" is one that begins operations on or after July 1, 2026."
+        },
+        {
+          "topic": "notice",
+          "text": "Before approving a land use application for a new large data center, the city or county land use authority must notify the Division of Water Rights, the Division of Water Quality and the relevant water provider."
+        },
+        {
+          "topic": "reporting",
+          "text": "At least 90 days, but no sooner than 360 days, before construction begins, the operator must notify the water provider of anticipated water consumption and report to the Division of Water Rights the location, estimated annual withdrawal, plans to treat discharges, any discharge temperature adjustment, and planned water reuse or replacement."
+        },
+        {
+          "topic": "reporting",
+          "text": "Once operating, the operator must report each year by July 1, for the previous calendar year: actual withdrawals, efforts to reduce water consumption, and efforts to protect the environment and public from polluted water."
+        },
+        {
+          "topic": "reporting",
+          "text": "The Division must publish water withdrawal data for each new large data center on its public website by September 1 for the previous calendar year, \"and not in the aggregate.\" Other reported details may be treated as protected proprietary records and published only as aggregated, anonymized data by county."
+        },
+        {
+          "topic": "enforcement",
+          "text": "If an operator still fails to submit a complete report after notice from the Division, the Division shall impose a fine of up to $100 for each day of noncompliance."
+        }
+      ],
+      "caveats": "Based on the enrolled copy of the bill, which states an effective date of May 6, 2026. Fides has not independently confirmed the signing date. The requirements apply to new large data centers; facilities operating before July 1, 2026 are not covered by these reporting duties.",
+      "sources": [
+        {
+          "title": "Utah State Legislature, H.B. 76 Data Center Water Transparency Amendments, enrolled copy (PDF)",
+          "url": "https://le.utah.gov/Session/2026/bills/enrolled/HB0076.pdf",
+          "retrieved": "2026-11-14"
+        }
+      ]
+    }
+  ]
+}

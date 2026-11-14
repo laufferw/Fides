@@ -1,0 +1,499 @@
+{
+  "notice": "DEMO DATA. All projects in this file are fictional and exist only to demonstrate the tracker. Counties and coordinates are real places; names, operators, numbers and commitments are invented.",
+  "projects": [
+    {
+      "id": "demo-saguaro-flats",
+      "demo": true,
+      "name": "Saguaro Flats Campus",
+      "operator": "Halcyon Grid (fictional)",
+      "county": "Maricopa",
+      "county_fips": "04013",
+      "state": "AZ",
+      "lat": 33.33,
+      "lon": -111.63,
+      "status": "operating",
+      "capacity_mw": 240,
+      "water_source": "reclaimed",
+      "cooling": "closed_loop",
+      "water_use": {
+        "projected_mgy": 35,
+        "actual_mgy": 31,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 72,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Use only reclaimed water for cooling.",
+          "status": "kept",
+          "date": "2022-03-14",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Publish annual water use each March.",
+          "status": "kept",
+          "date": "2022-03-14",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Match 100% of load with new solar by 2028.",
+          "status": "in_progress",
+          "date": "2023-06-01",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-copper-basin",
+      "demo": true,
+      "name": "Copper Basin Data Park",
+      "operator": "Tessellate Compute (fictional)",
+      "county": "Pinal",
+      "county_fips": "04021",
+      "state": "AZ",
+      "lat": 32.92,
+      "lon": -111.72,
+      "status": "under_construction",
+      "capacity_mw": 400,
+      "water_source": "groundwater",
+      "cooling": "evaporative",
+      "water_use": {
+        "projected_mgy": 620,
+        "actual_mgy": null
+      },
+      "clean_power_pct": 25,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Fund recharge of an equal volume of groundwater.",
+          "status": "not_yet_due",
+          "date": "2025-02-10",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-bayline",
+      "demo": true,
+      "name": "Bayline Colocation Center",
+      "operator": "Marlowe Digital (fictional)",
+      "county": "Santa Clara",
+      "county_fips": "06085",
+      "state": "CA",
+      "lat": 37.37,
+      "lon": -121.95,
+      "status": "operating",
+      "capacity_mw": 60,
+      "water_source": "reclaimed",
+      "cooling": "hybrid",
+      "water_use": {
+        "projected_mgy": 48,
+        "actual_mgy": 52,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 88,
+      "heat_reuse": "operating",
+      "commitments": [
+        {
+          "text": "Supply waste heat to the neighboring community pool.",
+          "status": "kept",
+          "date": "2021-09-01",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Keep annual water use under 50 million gallons.",
+          "status": "broken",
+          "date": "2021-09-01",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Run on 24/7 carbon-free power by 2030.",
+          "status": "in_progress",
+          "date": "2022-01-20",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-truckee-reach",
+      "demo": true,
+      "name": "Truckee Reach Campus",
+      "operator": "Quillfeather Systems (fictional)",
+      "county": "Storey",
+      "county_fips": "32029",
+      "state": "NV",
+      "lat": 39.53,
+      "lon": -119.45,
+      "status": "operating",
+      "capacity_mw": 520,
+      "water_source": "none",
+      "cooling": "air",
+      "water_use": {
+        "projected_mgy": 0,
+        "actual_mgy": 0,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 61,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Use no water for cooling.",
+          "status": "kept",
+          "date": "2020-05-05",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Hire 40% of permanent staff locally.",
+          "status": "broken",
+          "date": "2020-05-05",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mojave-gate",
+      "demo": true,
+      "name": "Mojave Gate Data Center",
+      "operator": "Brightwell Cloud (fictional)",
+      "county": "Clark",
+      "county_fips": "32003",
+      "state": "NV",
+      "lat": 36.25,
+      "lon": -115.05,
+      "status": "approved",
+      "capacity_mw": 180,
+      "water_source": "municipal_potable",
+      "cooling": "hybrid",
+      "water_use": {
+        "projected_mgy": 140,
+        "actual_mgy": null
+      },
+      "clean_power_pct": null,
+      "heat_reuse": "none",
+      "commitments": [],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-cedar-bench",
+      "demo": true,
+      "name": "Cedar Bench Campus",
+      "operator": "Ironwood Hosting (fictional)",
+      "county": "Utah",
+      "county_fips": "49049",
+      "state": "UT",
+      "lat": 40.33,
+      "lon": -111.98,
+      "status": "operating",
+      "capacity_mw": 310,
+      "water_source": "municipal_potable",
+      "cooling": "evaporative",
+      "water_use": {
+        "projected_mgy": 410,
+        "actual_mgy": 455,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 34,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Cap water use at 400 million gallons a year.",
+          "status": "broken",
+          "date": "2019-11-12",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Report water use to the city every year.",
+          "status": "broken",
+          "date": "2019-11-12",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Install on-site solar canopies.",
+          "status": "kept",
+          "date": "2021-04-02",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-sevier-plain",
+      "demo": true,
+      "name": "Sevier Plain Compute Hub",
+      "operator": "Lanternfish AI (fictional)",
+      "county": "Millard",
+      "county_fips": "49027",
+      "state": "UT",
+      "lat": 39.35,
+      "lon": -112.6,
+      "status": "proposed",
+      "capacity_mw": 1200,
+      "water_source": "undisclosed",
+      "cooling": "undisclosed",
+      "water_use": {
+        "projected_mgy": null,
+        "actual_mgy": null
+      },
+      "clean_power_pct": null,
+      "heat_reuse": "none",
+      "commitments": [],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-front-range",
+      "demo": true,
+      "name": "Front Range Exchange",
+      "operator": "Pallas Networks (fictional)",
+      "county": "Weld",
+      "county_fips": "08123",
+      "state": "CO",
+      "lat": 40.3,
+      "lon": -104.75,
+      "status": "operating",
+      "capacity_mw": 95,
+      "water_source": "non_potable",
+      "cooling": "closed_loop",
+      "water_use": {
+        "projected_mgy": 12,
+        "actual_mgy": 11,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 79,
+      "heat_reuse": "planned",
+      "commitments": [
+        {
+          "text": "Draw cooling make-up water from non-potable supply only.",
+          "status": "kept",
+          "date": "2022-08-18",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Deliver waste heat to a district greenhouse by 2027.",
+          "status": "in_progress",
+          "date": "2024-03-03",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-pikes-view",
+      "demo": true,
+      "name": "Pikes View Data Center",
+      "operator": "Juniper Vale Hosting (fictional)",
+      "county": "El Paso",
+      "county_fips": "08041",
+      "state": "CO",
+      "lat": 38.8,
+      "lon": -104.65,
+      "status": "under_construction",
+      "capacity_mw": 150,
+      "water_source": "surface",
+      "cooling": "hybrid",
+      "water_use": {
+        "projected_mgy": 90,
+        "actual_mgy": null
+      },
+      "clean_power_pct": 45,
+      "heat_reuse": "planned",
+      "commitments": [
+        {
+          "text": "Complete a public water-supply study before opening.",
+          "status": "kept",
+          "date": "2024-10-01",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-rio-abajo",
+      "demo": true,
+      "name": "Rio Abajo Campus",
+      "operator": "Solano Ridge Data (fictional)",
+      "county": "Valencia",
+      "county_fips": "35061",
+      "state": "NM",
+      "lat": 34.77,
+      "lon": -106.76,
+      "status": "operating",
+      "capacity_mw": 275,
+      "water_source": "groundwater",
+      "cooling": "hybrid",
+      "water_use": {
+        "projected_mgy": 160,
+        "actual_mgy": 172,
+        "actual_year": 2025
+      },
+      "clean_power_pct": 100,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Power the campus with 100% new wind and solar.",
+          "status": "kept",
+          "date": "2020-02-02",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Return treated water to the aquifer.",
+          "status": "kept",
+          "date": "2020-02-02",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        },
+        {
+          "text": "Keep groundwater pumping under 160 million gallons a year.",
+          "status": "broken",
+          "date": "2020-02-02",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    },
+    {
+      "id": "demo-high-plains",
+      "demo": true,
+      "name": "High Plains Compute Ranch",
+      "operator": "Windrow Systems (fictional)",
+      "county": "Laramie",
+      "county_fips": "56021",
+      "state": "WY",
+      "lat": 41.15,
+      "lon": -104.9,
+      "status": "cancelled",
+      "capacity_mw": 600,
+      "water_source": "groundwater",
+      "cooling": "air",
+      "water_use": {
+        "projected_mgy": 8,
+        "actual_mgy": null
+      },
+      "clean_power_pct": 55,
+      "heat_reuse": "none",
+      "commitments": [
+        {
+          "text": "Build 300 MW of dedicated wind generation.",
+          "status": "not_yet_due",
+          "date": "2024-06-15",
+          "source": {
+            "title": "Fictional demo commitment",
+            "demo": true
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Fictional demo record — not a real project",
+          "demo": true
+        }
+      ]
+    }
+  ]
+}
