@@ -1,5 +1,5 @@
 test:
-	node --test tests/
+	node --test 'tests/*.test.mjs'
 	python3 -m pytest -q tests/
 
 serve:

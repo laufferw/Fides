@@ -4,6 +4,6 @@
   "type": "module",
   "description": "Accountability tracker for data centers in the American West. No runtime dependencies.",
   "scripts": {
-    "test": "node --test tests/"
+    "test": "node --test \"tests/*.test.mjs\""
   }
 }
