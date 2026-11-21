@@ -16,6 +16,9 @@ officials.
 
 ## Run it
 
+The live site is at https://laufferw.github.io/Fides/. It is redeployed from
+`main` by `.github/workflows/pages.yml` whenever the tests pass.
+
 No build step and no dependencies for the site.
 
 ```

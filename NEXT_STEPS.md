@@ -44,9 +44,9 @@ These were made or left open during the build and need your call.
 4. **Default branch.** GitHub probably made `claude/vibrant-tesla-fe2wkz` the
    default because it was pushed first. Switch it to `main` under Settings →
    General → Default branch, then delete the work branch.
-5. **Hosting.** Nothing is deployed. The site needs the repository root as the
-   web root (it fetches `../data/` from `/site/`). GitHub Pages from `main`
-   would work as-is.
+5. **Hosting.** Done: `.github/workflows/pages.yml` publishes the site to
+   GitHub Pages (https://laufferw.github.io/Fides/) on every push to `main`,
+   after the tests pass.
 
 ## Loose ends from Milestone 1
 
@@ -61,9 +61,10 @@ These were made or left open during the build and need your call.
   A code update was reportedly under discussion in late October 2026.
 - **Colorado water rights** are downloaded and summarized but not shown
   anywhere in the site.
-- **Overlapping map markers** (the two Arizona projects, the Colorado Front
-  Range) are hard to click apart.
-- **No CI.** Tests run only when someone runs `make test`.
+- ~~Overlapping map markers~~ Done: `site/js/layout.js` nudges markers apart
+  so none overlap; a leader line shows the true spot when one moves far.
+- ~~No CI~~ Done: `.github/workflows/ci.yml` runs `make test` on every pull
+  request and every push to a branch other than `main`.
 - **Pipeline commits were coarser than planned:** the three scripts landed in
   one commit.
 
@@ -91,7 +92,7 @@ The goal is to replace demo records with sourced ones.
 - Score water volume against local supply.
 - More rules: Tucson, Mesa and Phoenix have reportedly adopted data center
   standards; verify each from the official text before adding.
-- Scheduled pipeline refresh (drought weekly, EIA yearly) and CI. A scheduled
+- Scheduled pipeline refresh (drought weekly, EIA yearly). A scheduled
   job is a deployment decision, so it needs your OK first.
 - Paid certification and risk intelligence, kept separate from the public
   score.
