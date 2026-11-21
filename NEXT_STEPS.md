@@ -41,9 +41,8 @@ These were made or left open during the build and need your call.
    switches it off.
 3. **Licence.** There is no licence file. Pick one for the code and one for
    the data (they are often different).
-4. **Default branch.** GitHub probably made `claude/vibrant-tesla-fe2wkz` the
-   default because it was pushed first. Switch it to `main` under Settings →
-   General → Default branch, then delete the work branch.
+4. **Default branch.** Done: `main` is the default and the old
+   `claude/vibrant-tesla-fe2wkz` work branch is deleted.
 5. **Hosting.** Done: `.github/workflows/pages.yml` publishes the site to
    GitHub Pages (https://laufferw.github.io/Fides/) on every push to `main`,
    after the tests pass.
