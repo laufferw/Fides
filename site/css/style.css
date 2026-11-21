@@ -117,6 +117,8 @@ main.wrap { padding-top: 24px; padding-bottom: 48px; min-height: 60vh; }
 .map-land path { fill: var(--land); stroke: var(--land-line); stroke-width: 1.5; stroke-linejoin: round; }
 .map-state-label { fill: var(--land-label); font: 600 13px var(--font); text-anchor: middle; letter-spacing: 0.08em; }
 
+.map-leader { stroke: var(--ink); stroke-width: 1.5; opacity: 0.55; }
+.map-anchor { fill: var(--ink); opacity: 0.7; }
 .marker { cursor: pointer; }
 .marker-dot { fill: currentColor; stroke: var(--card); stroke-width: 2; }
 .marker-score { fill: var(--card); font: 700 11px var(--font); text-anchor: middle; pointer-events: none; }
